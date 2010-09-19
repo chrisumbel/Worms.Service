@@ -1,0 +1,9 @@
+c:\users\kilnaar\Projects\Worms.Service\Worms.Service\bin\Worms.Service.dll
+c:\users\kilnaar\Projects\Worms.Service\Worms.Service\bin\Worms.Service.pdb
+c:\users\kilnaar\Projects\Worms.Service\Worms.Service\obj\Debug\ResolveAssemblyReference.cache
+c:\users\kilnaar\Projects\Worms.Service\Worms.Service\obj\Debug\Worms.Service.dll
+c:\users\kilnaar\Projects\Worms.Service\Worms.Service\obj\Debug\Worms.Service.pdb
+c:\users\kilnaar\Projects\Worms.Service\Worms.Service\bin\ClientAccessPolicy.xml
+C:\Users\kilnaar\Projects\Worms.Service\Worms.Service\bin\Norm.dll
+C:\Users\kilnaar\Projects\Worms.Service\Worms.Service\bin\Norm.pdb
+C:\Users\kilnaar\Projects\Worms.Service\Worms.Service\bin\Norm.xml
