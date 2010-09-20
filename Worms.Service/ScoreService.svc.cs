@@ -31,7 +31,7 @@ namespace Worms.Service
             using (IMongo mongo = Mongo.Create("mongodb://localhost/worms"))
             {
                 IEnumerable<Score> scores = mongo.GetCollection<Score>("Score").Find(new { }, 
-                    new { Score = Norm.OrderBy.Descending, CreatedAt = Norm.OrderBy.Descending }, HALL_THRESHOLD, 0).ToList<Score>();
+                    new { Value = Norm.OrderBy.Descending, CreatedAt = Norm.OrderBy.Descending }, HALL_THRESHOLD, 0).ToList<Score>();
 
                 qualifies = (scores.Last<Score>().Value <= score || scores.Count() < HALL_THRESHOLD);
             }
@@ -46,7 +46,7 @@ namespace Worms.Service
             using (IMongo mongo = Mongo.Create("mongodb://localhost/worms"))
             {
                 scores = mongo.GetCollection<Score>("Score").Find(new { }, 
-                    new { Score = Norm.OrderBy.Descending, CreatedAt = Norm.OrderBy.Descending }, count, 0).ToList<Score>();
+                    new { Value = Norm.OrderBy.Descending, CreatedAt = Norm.OrderBy.Descending }, count, 0).ToList<Score>();
             }
 
             return scores;
