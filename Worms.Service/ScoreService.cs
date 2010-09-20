@@ -17,6 +17,12 @@ namespace Worms.Service
         List<Score> GetHighScores(int count);
 
         [OperationContract, WebGet(UriTemplate = "/crossdomain.xml")]
+        bool QualifiesForHall(int count);
+
+        [OperationContract, WebGet(UriTemplate = "/crossdomain.xml")]
+        int GetHallThreshold();
+
+        [OperationContract, WebGet(UriTemplate = "/crossdomain.xml")]
         void AddHighScore(Score score);
     }
 

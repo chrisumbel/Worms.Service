@@ -17,13 +17,36 @@ namespace Worms.Service
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     public class ScoreService : IScoreService
     {
+        private const int HALL_THRESHOLD = 10;
+
+        public int GetHallThreshold() 
+        {
+            return HALL_THRESHOLD;
+        }
+
+        public bool QualifiesForHall(int score)
+        {
+            bool qualifies = false;
+
+            using (IMongo mongo = Mongo.Create("mongodb://localhost/worms"))
+            {
+                IEnumerable<Score> scores = mongo.GetCollection<Score>("Score").Find(new { }, 
+                    new { Score = Norm.OrderBy.Descending, CreatedAt = Norm.OrderBy.Descending }, HALL_THRESHOLD, 0).ToList<Score>();
+
+                qualifies = (scores.Last<Score>().Value <= score || scores.Count() < HALL_THRESHOLD);
+            }
+
+            return qualifies;
+        }
+        
         public List<Score> GetHighScores(int count)
         {
             List<Score> scores = null;
 
             using (IMongo mongo = Mongo.Create("mongodb://localhost/worms"))
             {
-                scores = mongo.GetCollection<Score>("Score").Find(new { }, new { Score = Norm.OrderBy.Descending }, count, 0).ToList<Score>();
+                scores = mongo.GetCollection<Score>("Score").Find(new { }, 
+                    new { Score = Norm.OrderBy.Descending, CreatedAt = Norm.OrderBy.Descending }, count, 0).ToList<Score>();
             }
 
             return scores;
