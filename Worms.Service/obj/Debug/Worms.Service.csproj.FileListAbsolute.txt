@@ -7,3 +7,13 @@ c:\users\kilnaar\Projects\Worms.Service\Worms.Service\bin\ClientAccessPolicy.xml
 C:\Users\kilnaar\Projects\Worms.Service\Worms.Service\bin\Norm.dll
 C:\Users\kilnaar\Projects\Worms.Service\Worms.Service\bin\Norm.pdb
 C:\Users\kilnaar\Projects\Worms.Service\Worms.Service\bin\Norm.xml
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\ClientAccessPolicy.xml
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\Worms.Service.dll.config
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\Worms.Service.dll
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\Worms.Service.pdb
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\Norm.dll
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\Norm.pdb
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\Norm.xml
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\obj\Debug\Worms.Service.csprojResolveAssemblyReference.cache
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\obj\Debug\Worms.Service.dll
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\obj\Debug\Worms.Service.pdb

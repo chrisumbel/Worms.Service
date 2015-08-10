@@ -24,22 +24,16 @@ namespace Worms.Service
             return HALL_THRESHOLD;
         }
 
-        private String MongoURL {
-            get {                
-                return Environment.GetEnvironmentVariable("MONGODB_URL") == null ? "mongodb://localhost/worms" : Environment.GetEnvironmentVariable("MONGODB_URL");
-            }
-        }
-
         public bool QualifiesForHall(int score)
         {
             bool qualifies = false;
 
-            using (IMongo mongo = Mongo.Create(this.MongoURL))
+            using (IMongo mongo = Mongo.Create("mongodb://localhost/worms"))
             {
                 IEnumerable<Score> scores = mongo.GetCollection<Score>("Score").Find(new { }, 
                     new { Value = Norm.OrderBy.Descending, CreatedAt = Norm.OrderBy.Descending }, HALL_THRESHOLD, 0).ToList<Score>();
 
-                qualifies = scores.Count() == 0 || (scores.Last<Score>().Value <= score || scores.Count() < HALL_THRESHOLD);
+                qualifies = (scores.Last<Score>().Value <= score || scores.Count() < HALL_THRESHOLD);
             }
 
             return qualifies;
@@ -49,7 +43,7 @@ namespace Worms.Service
         {
             List<Score> scores = null;
 
-            using (IMongo mongo = Mongo.Create(this.MongoURL))
+            using (IMongo mongo = Mongo.Create("mongodb://localhost/worms"))
             {
                 scores = mongo.GetCollection<Score>("Score").Find(new { }, 
                     new { Value = Norm.OrderBy.Descending, CreatedAt = Norm.OrderBy.Descending }, count, 0).ToList<Score>();
@@ -60,7 +54,7 @@ namespace Worms.Service
 
         public void AddHighScore(Score score) 
         {
-            using (IMongo mongo = Mongo.Create(this.MongoURL))
+            using (IMongo mongo = Mongo.Create("mongodb://localhost/worms"))
             {
                 mongo.GetCollection<Score>("Score").Insert(score);
             } 

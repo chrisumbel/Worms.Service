@@ -1,8 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worms.Service", "Worms.Service\Worms.Service.csproj", "{E081D2A9-B94E-44E3-80AC-9F13350ED4D2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoRM", "NoRM\NoRM.csproj", "{297A83DB-DACE-4264-B28E-769CF165D4E4}"

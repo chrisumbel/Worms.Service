@@ -8,3 +8,9 @@ C:\Users\kilnaar\Projects\Worms.Service\NoRM\bin\Debug\Norm.pdb
 C:\Users\kilnaar\Projects\Worms.Service\NoRM\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\kilnaar\Projects\Worms.Service\NoRM\obj\Debug\Norm.dll
 C:\Users\kilnaar\Projects\Worms.Service\NoRM\obj\Debug\Norm.pdb
+C:\Users\Christopher Umbel\src\Worms.Service\NoRM\bin\Debug\Norm.XML
+C:\Users\Christopher Umbel\src\Worms.Service\NoRM\bin\Debug\Norm.dll
+C:\Users\Christopher Umbel\src\Worms.Service\NoRM\bin\Debug\Norm.pdb
+C:\Users\Christopher Umbel\src\Worms.Service\NoRM\obj\Debug\NoRM.csprojResolveAssemblyReference.cache
+C:\Users\Christopher Umbel\src\Worms.Service\NoRM\obj\Debug\Norm.dll
+C:\Users\Christopher Umbel\src\Worms.Service\NoRM\obj\Debug\Norm.pdb
