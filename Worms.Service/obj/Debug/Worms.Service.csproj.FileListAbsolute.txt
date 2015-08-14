@@ -17,3 +17,5 @@ C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\Norm.xml
 C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\obj\Debug\Worms.Service.csprojResolveAssemblyReference.cache
 C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\obj\Debug\Worms.Service.dll
 C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\obj\Debug\Worms.Service.pdb
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\Newtonsoft.Json.dll
+C:\Users\Christopher Umbel\src\Worms.Service\Worms.Service\bin\Newtonsoft.Json.xml

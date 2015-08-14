@@ -17,6 +17,17 @@ namespace Worms.Service
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
     public class ScoreService : IScoreService
     {
+        private string GenerateConnectionString()
+        {
+            if (Environment.GetEnvironmentVariable("VCAP_SERVICES") == null)
+                return "mongodb://localhost/worms";
+
+            Dictionary<string, object> vcapServices = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(
+                Environment.GetEnvironmentVariable("VCAP_SERVICES"));
+            var credentials = ((Newtonsoft.Json.Linq.JArray)vcapServices["p-mongodb"]).First()["credentials"];
+            return credentials["uri"].ToString();
+        }
+
         private const int HALL_THRESHOLD = 10;
 
         public int GetHallThreshold() 
@@ -25,8 +36,8 @@ namespace Worms.Service
         }
 
         private String MongoURL {
-            get {                
-                return Environment.GetEnvironmentVariable("MONGODB_URL") == null ? "mongodb://localhost/worms" : Environment.GetEnvironmentVariable("MONGODB_URL");
+            get {
+                return GenerateConnectionString();
             }
         }
 
